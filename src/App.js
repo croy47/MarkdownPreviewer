@@ -11,7 +11,7 @@ function App() {
           <b>
             Designed by
             <a href="mailto:croy4744@gmail.com"> Chandan Roy </a>
-            on 05.01. 2021
+            on 01.05. 2021
           </b>
         </p>
         <p>
