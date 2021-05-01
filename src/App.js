@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+// import { useGlobalContext } from "./Context";
+import { Editor } from "./Editor";
+import { Previewer } from "./Previewer";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <div>
+      <div class="details">
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          <b>
+            Designed by
+            <a href="mailto:croy4744@gmail.com"> Chandan Roy </a>
+            on 05.01. 2021
+          </b>
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <p>
+          <a
+            href="https://github.com/croy47/markdown_previewer"
+            target="_blank"
+          >
+            {" "}
+            Source Code
+          </a>
+        </p>
+      </div>
+      <main>
+        <Editor />
+        <Previewer />
+      </main>
     </div>
   );
 }
