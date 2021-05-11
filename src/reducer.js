@@ -7,6 +7,14 @@ const reducer = (state, action) => {
     return { ...state, value: "" };
   }
 
+  if (action.type === "TOGGLE_EDITOR_SIZE") {
+    return { ...state, editorMaximized: !state.editorMaximized };
+  }
+
+  if (action.type === "TOGGLE_PREVIEWER_SIZE") {
+    return { ...state, previewerMaximized: !state.previewerMaximized };
+  }
+
   return state;
 };
 

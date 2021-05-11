@@ -9,6 +9,8 @@ let defaultVal = placeholder;
 
 const initialState = {
   value: defaultVal,
+  editorMaxmized: false,
+  previewerMaximized: false,
 };
 
 const AppProvider = ({ children }) => {
@@ -22,8 +24,24 @@ const AppProvider = ({ children }) => {
     dispatch({ type: "CLEAR" });
   };
 
+  const toggleEditorSize = () => {
+    dispatch({ type: "TOGGLE_EDITOR_SIZE" });
+  };
+
+  const togglePreviewerSize = () => {
+    dispatch({ type: "TOGGLE_PREVIEWER_SIZE" });
+  };
+
   return (
-    <AppContext.Provider value={{ ...state, handleChange, clearEditor }}>
+    <AppContext.Provider
+      value={{
+        ...state,
+        handleChange,
+        clearEditor,
+        toggleEditorSize,
+        togglePreviewerSize,
+      }}
+    >
       {children}
     </AppContext.Provider>
   );

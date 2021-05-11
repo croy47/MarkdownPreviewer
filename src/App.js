@@ -15,10 +15,7 @@ function App() {
           </b>
         </p>
         <p>
-          <a
-            href="https://github.com/croy47/markdown_previewer"
-            target="_blank"
-          >
+          <a href="https://github.com/croy47/MarkdownPreviewer" target="_blank">
             {" "}
             Source Code
           </a>
